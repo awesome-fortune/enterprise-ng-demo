@@ -20,7 +20,9 @@
               "apps/customer-portal/customer-portal/src/favicon.ico",
               "apps/customer-portal/customer-portal/src/assets"
             ],
-            "styles": ["apps/customer-portal/customer-portal/src/styles.scss"],
+            "styles": [
+              "apps/customer-portal/customer-portal/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -81,7 +83,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/customer-portal/customer-portal"],
+          "outputs": [
+            "coverage/apps/customer-portal/customer-portal"
+          ],
           "options": {
             "jestConfig": "apps/customer-portal/customer-portal/jest.config.js",
             "passWithNoTests": true
@@ -134,7 +138,9 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/auth"],
+          "outputs": [
+            "coverage/libs/auth"
+          ],
           "options": {
             "jestConfig": "libs/auth/jest.config.js",
             "passWithNoTests": true
@@ -149,20 +155,109 @@
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": { "lintFilePatterns": ["libs/data-models/**/*.ts"] }
+          "options": {
+            "lintFilePatterns": [
+              "libs/data-models/**/*.ts"
+            ]
+          }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/data-models"],
+          "outputs": [
+            "coverage/libs/data-models"
+          ],
           "options": {
             "jestConfig": "libs/data-models/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
+    },
+    "material": {
+      "projectType": "library",
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "prefix": "demo-app",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/material/src/**/*.ts",
+              "libs/material/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/material"
+          ],
+          "options": {
+            "jestConfig": "libs/material/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "layout": {
+      "projectType": "library",
+      "root": "libs/layout",
+      "sourceRoot": "libs/layout/src",
+      "prefix": "demo-app",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/layout/src/**/*.ts",
+              "libs/layout/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/layout"
+          ],
+          "options": {
+            "jestConfig": "libs/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "products": {
+      "projectType": "library",
+      "root": "libs/products",
+      "sourceRoot": "libs/products/src",
+      "prefix": "app",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/products/src/**/*.ts",
+              "libs/products/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/products"
+          ],
+          "options": {
+            "jestConfig": "libs/products/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
-  "cli": { "defaultCollection": "@nrwl/angular" },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
@@ -176,7 +271,9 @@
       "unitTestRunner": "jest",
       "strict": true
     },
-    "@nrwl/angular:component": { "style": "scss" }
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
   },
   "defaultProject": "customer-portal-customer-portal"
 }

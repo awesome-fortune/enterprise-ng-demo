@@ -27,6 +27,9 @@
       "implicitDependencies": ["customer-portal-customer-portal"]
     },
     "auth": { "tags": [] },
-    "data-models": { "tags": [] }
+    "data-models": { "tags": [] },
+    "material": { "tags": [] },
+    "layout": { "tags": [] },
+    "products": { "tags": [] }
   }
 }
